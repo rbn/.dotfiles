@@ -5,11 +5,5 @@
 - quick usage: use "config" instead of "git" command, that will commit files to the dotfiles repo
 
 
-notes:
-- This is for singular dot files
-- Config files in .config (e.g., nvim) need their own repos, bc as of now I can't get this repo to take in subdirectories within the home directory
-
-
-for later:
-- figure out how to add subdirectories
+todo:
 - put in guidance around how to set this up on another computer
