@@ -159,5 +159,3 @@ function db () {
 
 # use git to store .files - see article with "config bare directory"
 alias config='/usr/bin/git --git-dir=/home/rbn/.dotfiles/ --work-tree=/home/rbn'
-
-#another comment
