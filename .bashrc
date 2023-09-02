@@ -133,7 +133,7 @@ alias onh="nvim ~/dev/my-life/new-hire-log.txt"
 alias pic="cd '/mnt/c/Users/rich.nyman/OneDrive - Cobalt/Pictures'"
 
 # working files - will change frequently
-function wkg () {
+function goals () {
    # first file - br; second file - tr; third file - tl; fourth file - bl;
    nvim goals-accomps.txt -c 'vsplit goals-accomps-w.txt'
 }
@@ -154,7 +154,7 @@ function tdc () {
 }
 
 function db () {
-   tmux new-session \; split-window -hfd \; send-keys 'todo' C-m \; select-pane -t 1 \; split-window -vd -p 50 \; send-keys 'wkg' C-m \; select-pane -t 2 \;
+   tmux new-session \; split-window -hfd \; send-keys 'todo' C-m \; select-pane -t 1 \; split-window -vd -p 50 \; send-keys 'goals' C-m \; select-pane -t 2 \;
 }
 
 # use git to store .files - see article with "config bare directory"

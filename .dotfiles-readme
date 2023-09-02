@@ -1,0 +1,11 @@
+this is a readme for the dotfiles repo!
+
+dotfiles repo is a bare repo, see this article for setup
+https://www.atlassian.com/git/tutorials/dotfiles
+
+quick summary:
+* use dotfiles EXACTLY AS THEY WOULD BE without any source control tracking
+* config (alias in bash to git) controls the .dotfiles repo
+* it can do all the things regular git can, but the files it tracks ARE NOT STORED IN .dotfiles!!
+* because it is a bare repo, it will track files outside of itself
+* and we use that capability to track our "dot" files.  including this one!
