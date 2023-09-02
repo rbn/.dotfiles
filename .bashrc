@@ -134,8 +134,8 @@ alias pic="cd '/mnt/c/Users/rich.nyman/OneDrive - Cobalt/Pictures'"
 
 # working files - will change frequently
 function wkg () {
-   # first file - br; second file - tr; third file - tl; fourth file - bl;
-   nvim goals-accomps.txt -c 'vsplit goals-accomps-w.txt'
+   # nvim goals-accomps.txt -c 'vsplit goals-accomps-w.txt'
+   nvim goals-accomps-w.txt
 }
 #
 # todo list helpers
