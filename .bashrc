@@ -129,6 +129,7 @@ bind 'set bell-style none'
 
 alias soba="source ~/.bashrc"
 alias eba="nvim ~/.bashrc"
+alias etm="nvim ~/.tmux.conf"
 alias onh="nvim ~/dev/my-life/new-hire-log.txt"
 alias pic="cd '/mnt/c/Users/rich.nyman/OneDrive - Cobalt/Pictures'"
 
@@ -140,9 +141,13 @@ function goals () {
 #
 # todo list helpers
 function todo () {
-   # old way: nvim -O ~/dev/my-life/todo-w.txt ~/dev/my-life/todo.txt
    # first file - br; second file - tr; third file - tl; fourth file - bl;
-   nvim vim-goals.txt -c 'split todo.txt' -c 'vsplit todo-w.txt' -c 'wincmd j' -c 'vsplit rollouts.txt'
+   nvim goals-accomps-w.txt -c 'split todo.txt' -c 'vsplit todo-w.txt' -c 'wincmd j' -c 'vsplit rollouts.txt'
+}
+
+function todo-only () {
+   # first file - br; second file - tr; third file - tl; fourth file - bl;
+   nvim todo.txt -c 'vsp todo-w.txt'
 }
 
 function tdc () {
@@ -154,8 +159,10 @@ function tdc () {
 }
 
 function db () {
-   tmux new-session \; split-window -hfd \; send-keys 'todo' C-m \; select-pane -t 1 \; split-window -vd -p 50 \; send-keys 'goals' C-m \; select-pane -t 2 \;
+   # tmux new-session \; split-window -hfd \; send-keys 'todo' C-m \; select-pane -t 1 \; split-window -vd -p 50 \; send-keys 'goals' C-m \; select-pane -t 2 \;
+   tmux new-session \; split-window -vd -p 40 \; send-keys 'todo-only' C-m \; select-pane -t 1 \;
 }
 
 # use git to store .files - see article with "config bare directory"
 alias config='/usr/bin/git --git-dir=/home/rbn/.dotfiles/ --work-tree=/home/rbn'
+alias od="cd '/mnt/c/Documents and Settings/rich.nyman/Cobalt'"
